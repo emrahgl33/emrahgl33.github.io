@@ -2,11 +2,11 @@
 :root {
     --primary-color: #333;
     --secondary-color: #f7f7f7;
-    --accent-color: #007bff; /* Mavi aksan rengi */
+    --accent-color: #007bff;
     --text-color: #555;
     --light-text: #888;
     --card-bg: #fff;
-    --photo-bg: #f0e6d6; /* Resimdeki arka plan rengi */
+    --photo-bg: #f0e6d6;
     --border-radius: 10px;
 }
 
@@ -23,9 +23,8 @@ body {
     color: var(--text-color);
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    /* min-height: 100vh; Kaldırıldı, içerik uzayınca kaydırma çubuğu çıksın */
+    padding: 40px 20px;
 }
 
 .container {
@@ -51,29 +50,34 @@ body {
     color: var(--text-color);
 }
 
-/* Profil Kartı */
-.profile-section {
-    display: flex;
-    justify-content: center;
-}
-
+/* Kart Stil Tanımı */
 .card {
-    display: flex;
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     padding: 30px;
-    width: 100%;
-    flex-wrap: wrap; /* Küçük ekranlar için alt alta geçişi sağlar */
+    margin-bottom: 30px;
 }
 
-/* Sol Taraf: Fotoğraf ve Hakkımda */
-.left-content {
-    flex: 2;
-    min-width: 300px;
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--photo-bg);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Üst Bölüm: Fotoğraf ve Detaylar */
+.detail-card {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.photo-area {
+    flex-shrink: 0;
 }
 
 .profile-photo-container {
@@ -82,7 +86,7 @@ body {
     width: 250px;
     height: 350px;
     overflow: hidden;
-    flex-shrink: 0;
+    /* Fotoğrafın çerçeve içinde tam oturmasını sağla */
 }
 
 .profile-photo {
@@ -92,48 +96,17 @@ body {
     display: block;
 }
 
-.about-me h2, .right-content h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.about-me p {
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-.source-link {
-    font-size: 0.8rem;
-    color: var(--light-text);
-}
-
-.source-link a {
-    color: var(--light-text);
-    text-decoration: none;
-}
-
-.source-link a:hover {
-    text-decoration: underline;
-}
-
-/* Sağ Taraf: Detaylar */
-.right-content {
-    flex: 1;
-    min-width: 200px;
-    padding-left: 30px;
-    border-left: 1px solid #eee; /* İnce ayırıcı çizgi */
+.details-area {
+    flex-grow: 1;
 }
 
 .details-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
 }
 
 .details-list li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
@@ -141,54 +114,53 @@ body {
     color: var(--primary-color);
     font-weight: 700;
     display: inline-block;
-    min-width: 70px; /* Detay başlıklarının hizalanması için */
+    min-width: 80px;
 }
 
-/* Sosyal Medya İkonları */
-.social-icons a {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin-right: 15px;
-    transition: color 0.2s;
+/* Alt Bölüm: Hakkımda (Daha Geniş ve Düzenli) */
+.about-me-section {
+    padding-top: 20px;
 }
 
-.social-icons a:hover {
-    color: var(--accent-color);
+.about-card {
+    padding: 40px;
 }
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    text-align: justify; /* Metni hizala */
+}
+
 
 /* Duyarlı Tasarım (Responsive Design) */
 @media (max-width: 768px) {
-    .card {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .left-content {
+    .detail-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px;
-        margin-bottom: 30px;
+        gap: 30px;
     }
 
     .profile-photo-container {
         width: 100%;
         max-width: 250px;
-        height: auto;
+        height: 350px;
     }
 
-    .right-content {
-        padding-left: 0;
-        border-left: none;
-        border-top: 1px solid #eee;
-        padding-top: 20px;
-        text-align: center;
+    .details-area {
+        width: 100%;
     }
     
     .details-list {
+        /* Detay listesini ortalamak için */
         text-align: left;
-        max-width: 300px;
-        margin: 0 auto 30px auto;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .about-card {
+        padding: 20px;
     }
 }
 
