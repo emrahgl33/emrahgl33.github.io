@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kombin Moda - Veri Silme Talebi</title>
+    <title>Kombin Moda - Data Deletion Policy</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f9f9f9; }
-        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #DE9D2D; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h3 { color: #444; margin-top: 25px; }
-        .info-box { background-color: #fff9eb; border: 1px solid #ffeeba; border-radius: 8px; padding: 20px; margin-top: 20px; }
-        .path { font-weight: bold; color: #BA7517; background: #eee; padding: 2px 6px; border-radius: 4px; }
-        .contact { font-weight: bold; color: #DE9D2D; }
-        footer { margin-top: 40px; font-size: 0.8em; color: #888; text-align: center; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; }
+        h1 { color: #24292e; border-bottom: 1px solid #eaecef; padding-bottom: 10px; }
+        .info-box { background-color: #f6f8fa; border: 1px solid #d1d5da; border-radius: 6px; padding: 20px; margin-top: 20px; }
+        .path { font-weight: bold; color: #0366d6; }
+        .warning { color: #d73a49; font-weight: bold; margin-top: 15px; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Kombin Moda</h1>
-    <h2>Veri Silme ve Gizlilik Bilgilendirmesi</h2>
+    <h1>Data Deletion & Privacy Policy</h1>
     
-    <p>Kombin Moda olarak gizliliğinize önem veriyoruz. Uygulamamız üzerinden paylaştığınız verileri (kombin fotoğrafları vb.) dilediğiniz zaman silme hakkına sahipsiniz.</p>
+    <p>At <strong>Kombin Moda</strong>, we respect your privacy. Our application operates without formal account registration (no email or password required) to ensure an anonymous experience.</p>
 
     <div class="info-box">
-        <h3>1. Uygulama İçinden Veri Silme</h3>
-        <p>Paylaştığınız aktif oylamaları veya kayıtlı kombinleri uygulama içinden anında silebilirsiniz:</p>
-        <ul>
-            <li><strong>Paylaşılan Hikayeler:</strong> Ana ekrandaki profil yuvarlağınıza tıklayın ve <span class="path">Sil</span> seçeneğini kullanın.</li>
-            <li><strong>Kayıtlı Kombinler:</strong> <span class="path">Kombinlerim</span> sekmesine gidin ve silmek istediğiniz kombinin üzerindeki çöp kutusu simgesine tıklayın.</li>
-        </ul>
+        <h3>How to Delete Your Data</h3>
+        <p>Users can permanently delete their shared content and app data directly from within the application:</p>
+        <p class="path">Main Screen &rarr; Tap Your Profile Circle &rarr; Delete Post</p>
+        <p>To delete saved outfits from your local library:</p>
+        <p class="path">My Outfits (Kombinlerim) &rarr; Delete Icon (Trash Can)</p>
     </div>
 
-    <h3>2. Veri Silme Talebi Gönderme</h3>
-    <p>Eğer uygulamanın topladığı tüm verilerin (cihaz kimliği, analiz verileri vb.) sistemlerimizden kalıcı olarak silinmesini istiyorsanız, bize aşağıdaki e-posta adresi üzerinden ulaşabilirsiniz:</p>
-    <p class="contact">E-posta: emrahgl... @gmail.com</p>
-    <p><em>(Lütfen talebinize uygulamanın ayarlar kısmında görünen kullanıcı ID'nizi eklemeyi unutmayın.)</em></p>
+    <h3>Account & Registration Policy</h3>
+    <p>Our app <strong>does not require or store</strong> personal identifiers such as your real name, phone number, or official email. Shared photos are hosted on secure Firebase servers with a unique anonymous ID.</p>
+    
+    <p>When you use the "Delete" features within the app, all associated media files and database records are immediately and permanently purged from our servers.</p>
 
-    <h3>3. Hangi Veriler Silinir?</h3>
-    <p>Talebiniz doğrultusunda şu veriler 7 iş günü içerisinde imha edilir:</p>
+    <h3>What Data is Removed?</h3>
+    <p>The deletion process ensures the following data is permanently erased:</p>
     <ul>
-        <li>Firebase Storage üzerindeki tüm fotoğraflarınız.</li>
-        <li>Firestore üzerindeki paylaşım kayıtlarınız.</li>
-        <li>Uygulama kullanım istatistikleriniz.</li>
+        <li>Uploaded outfit photos (Firebase Storage)</li>
+        <li>Voting interactions and scores (Firestore)</li>
+        <li>Device-specific identifiers used for basic analytics</li>
     </ul>
-</div>
 
-<footer>
-    &copy; 2026 Kombin Moda - Tüm Hakları Saklıdır.
-</footer>
+    <p class="warning">Notice: This action is permanent and cannot be undone. Once deleted, your content cannot be recovered.</p>
+
+    <hr>
+    <p><small>&copy; 2026 Kombin Moda. All rights reserved.</small></p>
 
 </body>
 </html>
